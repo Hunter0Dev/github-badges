@@ -12,11 +12,11 @@
 
 | Badge | Name | How It's Triggered |
 |:-----:|:----:|:------------------:|
-| <img src="https://raw.githubusercontent.com/drknzz/GitHub-Achievements/main/Media/Badges/Pull-Shark/PNG/PullShark.png" width="60"> | **Pull Shark** | Merge 2 Pull Requests |
-| <img src="https://raw.githubusercontent.com/drknzz/GitHub-Achievements/main/Media/Badges/YOLO/PNG/YOLO_Badge.png" width="60"> | **YOLO** | Merge a PR without code review |
-| <img src="https://raw.githubusercontent.com/drknzz/GitHub-Achievements/main/Media/Badges/Quick-Draw/PNG/Skin-Tones/QuickDraw_SkinTone1.png" width="60"> | **Quickdraw** | Close an issue within 5 minutes |
-| <img src="https://raw.githubusercontent.com/drknzz/GitHub-Achievements/main/Media/Badges/Pair-Extraordinaire/PNG/PairExtraordinaire.png" width="60"> | **Pair Extraordinaire** | Co-author a merged PR |
-| <img src="https://raw.githubusercontent.com/drknzz/GitHub-Achievements/main/Media/Badges/Galaxy-Brain/PNG/GalaxyBrain.png" width="60"> | **Galaxy Brain** | Get 2 discussion answers accepted |
+| <img src="assets/badges/pull-shark.png" width="60"> | **Pull Shark** | Merge 2 Pull Requests |
+| <img src="assets/badges/yolo.png" width="60"> | **YOLO** | Merge a PR without code review |
+| <img src="assets/badges/quickdraw.png" width="60"> | **Quickdraw** | Close an issue within 5 minutes |
+| <img src="assets/badges/pair-extraordinaire.png" width="60"> | **Pair Extraordinaire** | Co-author a merged PR |
+| <img src="assets/badges/galaxy-brain.png" width="60"> | **Galaxy Brain** | Get 2 discussion answers accepted |
 
 </div>
 
