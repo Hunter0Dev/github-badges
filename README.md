@@ -1,0 +1,1 @@
+\nTrigger Pair Extraordinaire
