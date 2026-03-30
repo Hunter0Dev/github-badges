@@ -1,0 +1,27 @@
+name: Galaxy Brain - Mark Discussion Answer
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  discussions: write
+
+jobs:
+  mark-answer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark discussion answer as accepted
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const mutation = `
+              mutation {
+                markDiscussionCommentAsAnswer(input: { id: "DC_kwDOR0wgVM4A-fWE" }) {
+                  discussion { id }
+                }
+              }
+            `;
+            const result = await github.graphql(mutation);
+            console.log('Answer marked as accepted:', JSON.stringify(result));
