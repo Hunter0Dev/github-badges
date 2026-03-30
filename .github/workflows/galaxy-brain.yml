@@ -1,4 +1,4 @@
-name: Galaxy Brain - Mark Discussion Answer
+name: Galaxy Brain - Mark Discussion Answers
 
 on:
   push:
@@ -8,20 +8,39 @@ permissions:
   discussions: write
 
 jobs:
-  mark-answer:
+  mark-answers:
     runs-on: ubuntu-latest
     steps:
-      - name: Mark discussion answer as accepted
+      - name: Mark first discussion answer as accepted
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const mutation = `
+            const mutation1 = `
               mutation {
                 markDiscussionCommentAsAnswer(input: { id: "DC_kwDOR0wgVM4A-fWE" }) {
                   discussion { id }
                 }
               }
             `;
-            const result = await github.graphql(mutation);
-            console.log('Answer marked as accepted:', JSON.stringify(result));
+            try {
+              const result1 = await github.graphql(mutation1);
+              console.log('Answer 1 marked:', JSON.stringify(result1));
+            } catch (e) {
+              console.log('Answer 1 already marked or error:', e.message);
+            }
+
+      - name: Mark second discussion answer as accepted
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const mutation2 = `
+              mutation {
+                markDiscussionCommentAsAnswer(input: { id: "DC_kwDOR0wgVM4A-fZZ" }) {
+                  discussion { id }
+                }
+              }
+            `;
+            const result2 = await github.graphql(mutation2);
+            console.log('Answer 2 marked:', JSON.stringify(result2));
